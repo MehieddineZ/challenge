@@ -27,3 +27,6 @@ Route::post('register', [\App\Http\Controllers\AuthenticationController::class, 
         Route::get('user', 'AuthenticationController@getAuthenticatedUser');
         Route::get('closed', 'DataController@closed');
     });
+    Route::post('create_customer', [\App\Http\Controllers\CustomerController::class, 'create_customer']);
+    Route::post('login_customer', [\App\Http\Controllers\CustomerController::class, 'login_customer']);
+    Route::get('get_customers',[\App\Http\Controllers\CustomerController::class, 'get_customers']);
